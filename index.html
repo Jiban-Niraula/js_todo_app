@@ -11,12 +11,21 @@
 <body>
   <div class="container">
     <h1>✨ My To-Do List</h1>
+
     <div class="input-group">
       <input type="text" id="taskInput" placeholder="Add a new task...">
       <button onclick="addTask()"><i class="fas fa-plus"></i></button>
     </div>
+
     <ul id="taskList"></ul>
+
+    <div class="file-buttons">
+      <button onclick="saveToFile()">💾 Save to task.txt</button>
+      <label for="fileInput" class="file-label">📂 Load from task.txt</label>
+      <input type="file" id="fileInput" accept=".txt" onchange="loadFromFile()" hidden>
+    </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
